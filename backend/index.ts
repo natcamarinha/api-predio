@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const PORT = 3001;
+const PORT = 7468;
 
 app.use('/', residentRouter);
 app.use(error);
