@@ -10,6 +10,8 @@ export default class ResidentController {
       const resident = await this.residentService.createResidentService(req.body);
       return res.status(StatusCode.CREATED).json(resident);
     } catch (error) {
+      console.log('erro:', error);
+      
       next(error);
     }
   }

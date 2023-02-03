@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  mysql:
+    container_name: api-predio
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_DATABASE=api-predio
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+    ports:
+      - "33060:3306"

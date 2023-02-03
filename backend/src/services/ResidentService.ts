@@ -16,6 +16,8 @@ export default class ResidentService {
   constructor(private readonly residentRepo: ResidentRepo) {}
 
   async createResidentService(body: any) {
+    console.log('-->', body);
+    
     const { error } = residentSchema.validate(body);
     if (error) throw errorHandler(StatusCode.BAD_REQUEST, 'missing required params');
     return this.residentRepo.createResidentRepo(body);
