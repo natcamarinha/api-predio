@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const PORT = process.env.MYSQLPORT || 3003;
+const PORT = process.env.MYSQL_PORT || 3003;
 
 app.use('/', residentRouter);
 app.use(error);
